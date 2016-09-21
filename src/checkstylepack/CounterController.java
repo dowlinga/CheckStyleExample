@@ -1,7 +1,9 @@
 package checkstylepack;
 
 public class CounterController {
-
+	/**
+	 * objects of IView and IModel
+	 */
 	private IView view;
 	private IModel model;
 
@@ -23,18 +25,24 @@ public class CounterController {
 	
 	/**
 	 * 
-	 * @param val an int
+	 * @param val an int for increment method
 	 */
 	public final void incr(final int val) {
 		model.add(val);
 		view.setResult(model.getValue());
 	}
 	
+	/**
+	 * decrement method with int as @param
+	 */
 	public final void decr(final int val) {
 		model.sub(val);
 		view.setResult(model.getValue());
 	}
 	
+	/**
+	 * reset method
+	 * */
 	public final void reset() {
 		model.reset();
 		view.setResult(model.getValue());
